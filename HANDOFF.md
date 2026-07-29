@@ -5,7 +5,18 @@
 
 ---
 
-## 0. 現在のステータス
+## 0. 現在のステータス：✅ 完成・公開済み（2026-07-29）
+
+- **公開URL**：https://kenvhana510.github.io/aichi-clean-lp/
+- **リポジトリ**：https://github.com/kenvhana510/aichi-clean-lp（Public）
+- **GitHub Pages**：Deploy from a branch / `main` / `/ (root)` で設定済み・push済み
+  （初回デプロイの反映には数分かかる場合がある）
+
+**本プロジェクトは完了。案件応募フェーズへ移行済み。以降の追加改善は予定していない。**
+
+---
+
+## 0-2. 制作フェーズの記録
 
 **Phase 1（基本実装）完了。画像はプレースホルダーのまま、LP全体が最初から最後まで完成し主要機能が動作する状態。次は Phase 2（レスポンシブ）。**
 
@@ -56,7 +67,20 @@
 | Phase 3 | 画像制作（プロンプト設計・画像生成） | ✅ 完了 |
 | Phase 4 | 画像実装・最終調整 | ✅ 完了 |
 | Phase 5 | 品質監査（第三者視点の再監査） | ✅ 完了 |
-| Phase 6 | GitHub Pages公開 | ⏳ 未実施（ユーザー指示待ち） |
+| Phase 6 | GitHub Pages公開 | ✅ 完了 |
+
+### Phase 6 実施結果（2026-07-29 完了）
+
+- ローカルGit初期化 → 初回コミット → `origin`（`https://github.com/kenvhana510/aichi-clean-lp.git`）へ push
+- `main` の upstream を `origin/main` に設定。ローカルとremoteのコミットが一致することを確認
+- remote上に**30ファイル**が反映済み（`index.html` / `css/style.css` / `js/main.js` / `images/` 23点 / `README.md` / `HANDOFF.md` / `image-prompts.md` / `.gitignore`）
+- `images/_source/`（元画像）と `.claude/`（ローカル設定）は `.gitignore` により**追跡対象外＝非公開**であることを確認
+- 機密情報・APIキー・個人情報の混入なしを確認（フォームの `placeholder="090-1234-5678"` は表示用のダミー値）
+- GitHub Pages を Deploy from a branch / `main` / `/ (root)` で設定
+
+**未確認事項**：本番URLでの表示確認は、初回デプロイの反映待ちのため未実施。
+ローカル環境（Phase 4・5）で全項目の検証を完了しているため、実装上の懸念はない。
+反映後にURLを開いて表示を確認すること。
 
 ### Phase 5 実施結果（2026-07-29 完了）
 
@@ -397,7 +421,7 @@ C:\Users\unear\aichi-clean-lp\
 
 ---
 
-## 9. Phase 1 実装計画（次に実行する作業）
+## 9. Phase 1 実装計画（✅ 実施済み・記録として保持）
 
 **目標：画像なし（プレースホルダー）でLP全体を最後まで完成させる。**
 
@@ -448,13 +472,14 @@ C:\Users\unear\aichi-clean-lp\
 
 ---
 
-## 11. 公開（Phase 6）
-
-1作目と同じ手順で GitHub Pages に公開する。
+## 11. 公開（Phase 6）✅ 完了
 
 - GitHubアカウント：`kenvhana510`
-- リポジトリ名（予定）：`aichi-clean-lp`（Public）
-- 公開URL（予定）：`https://kenvhana510.github.io/aichi-clean-lp/`
+- リポジトリ：`aichi-clean-lp`（Public）
+- 公開URL：`https://kenvhana510.github.io/aichi-clean-lp/`
 - git identity：`kenvhana510` / `kenvhana510@users.noreply.github.com`
-- `gh` CLIは未インストール。**リポジトリ作成はGitHubのWeb UIで行う必要がある。**
+
+**次に同種の作業を行う場合の申し送り**
+- `gh` CLIは未インストール・GitHubトークンも未設定のため、**リポジトリ作成とPages有効化はGitHubのWeb UIで行う必要がある。**
 - push時は Git Credential Manager によりブラウザ認証が走る。**フォアグラウンドで実行するとタイムアウトするため、バックグラウンド実行すること。**
+- `WebFetch` はURLごとに15分キャッシュするため、デプロイ確認で再取得する際は `?v=1` のようなクエリを付けて回避すること。
