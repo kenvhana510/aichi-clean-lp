@@ -1,0 +1,12 @@
+# 元画像バックアップ（サイト非参照、公開リポジトリを軽量に保つため除外）
+images/_source/
+
+# ローカル開発ツール設定
+.claude/
+
+# 営業用の提案文（公開不要）
+SALES-COPY.md
+
+# OS
+Thumbs.db
+.DS_Store
