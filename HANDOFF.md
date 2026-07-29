@@ -9,8 +9,8 @@
 
 - **公開URL**：https://kenvhana510.github.io/aichi-clean-lp/
 - **リポジトリ**：https://github.com/kenvhana510/aichi-clean-lp（Public）
-- **GitHub Pages**：Deploy from a branch / `main` / `/ (root)` で設定済み・push済み
-  （初回デプロイの反映には数分かかる場合がある）
+- **GitHub Pages**：Deploy from a branch / `main` / `/ (root)` で公開済み
+  **本番URLでの配信確認済み**（HTML・CSS・JS・WebP画像・OGP画像がすべて200で取得できることを確認）
 
 **本プロジェクトは完了。案件応募フェーズへ移行済み。以降の追加改善は予定していない。**
 
@@ -78,9 +78,20 @@
 - 機密情報・APIキー・個人情報の混入なしを確認（フォームの `placeholder="090-1234-5678"` は表示用のダミー値）
 - GitHub Pages を Deploy from a branch / `main` / `/ (root)` で設定
 
-**未確認事項**：本番URLでの表示確認は、初回デプロイの反映待ちのため未実施。
-ローカル環境（Phase 4・5）で全項目の検証を完了しているため、実装上の懸念はない。
-反映後にURLを開いて表示を確認すること。
+**本番URLでの配信確認（完了）**
+- `https://kenvhana510.github.io/aichi-clean-lp/` … HTML 正常（title・h1・画像参照11件を確認）
+- `css/style.css` … 正常（CSS変数を含む完全な内容）
+- `js/main.js` … 正常（5機能を含む完全な内容）
+- `images/hero-main.webp` … 正常（81KB / WebP署名を確認）
+- `images/ogp.jpg` … 正常（104KB / JPEG署名を確認）
+- **サブディレクトリ配信（`/aichi-clean-lp/`）でも相対パスが正しく解決されている**
+
+**公開時につまずいた点（次回の申し送り）**
+1. Pages設定画面で **Branch が `None` のまま Save** しても有効化されない。
+   `main` を選択したうえで Save する必要がある（「GitHub Pages is currently disabled」と表示されていたら未設定）。
+2. リポジトリの Settings は**ログイン済みのブラウザ**でしか開けない。
+   未ログインのブラウザで開くと 404 になり、設定できていないことに気づきにくい。
+3. `WebFetch` はURLごとに15分キャッシュするため、デプロイ確認では `?check=1` 等のクエリを付けて回避する。
 
 ### Phase 5 実施結果（2026-07-29 完了）
 

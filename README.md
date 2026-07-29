@@ -12,7 +12,7 @@ Web制作案件獲得のためのポートフォリオとして、**問い合わ
 **リポジトリ**：https://github.com/kenvhana510/aichi-clean-lp
 **公開日**：2026-07-29
 
-> GitHub Pages の設定は完了しています。初回デプロイの反映には数分かかる場合があります。
+> GitHub Pages（`main` / `/ (root)`）で公開済み。本番URLでの配信を確認済みです。
 
 ---
 
