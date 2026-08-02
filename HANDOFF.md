@@ -16,6 +16,59 @@
 
 ---
 
+## 0-4. 品質監査・実ブラウザQA（2026-08-02、追加セッション）
+
+**目的**：WCAG準拠・SEOメタデータの追加と、実ブラウザ（headless Chrome）によるレスポンシブ再検証。
+
+### 実施内容
+
+1. **`.eyebrow` / `.hero__eyebrow` のコントラスト比修正**（コミット `0632aea`）
+   `--blue`（#1878b8）を`--blue-light`背景上で12px太字テキストに使用しており4.26:1（WCAG AA基準4.5:1未達）だった。
+   `--blue-deep`（#136494）を新設し、この2箇所のみ置き換え。`--blue-light`上5.74:1／`--blue-pale`上6.09:1／白地上6.41:1に改善。
+2. **SEO構造化データ・canonical・theme-color追加**（コミット `be96a01`）
+   `<link rel="canonical">`・`<meta name="theme-color">`・`HomeAndConstructionBusiness`のJSON-LDを追加。
+   `robots: noindex, nofollow`は架空サイトのため意図的に維持（変更していない）。
+
+### 実ブラウザQA（headless Chrome、Chrome DevTools Protocolで正確なビューポート指定）
+
+**検証幅**：320 / 375 / 390 / 414 / 768 / 1024 / 1440 / 1920px（全8幅）
+
+**申し送り（重要・次セッションへ）**：
+`chrome.exe --headless=new --window-size=W,H --screenshot=...` は、この環境では**W=320〜500px程度を指定してもビューポート幅が実際には500〜526px相当に固定される**（CLIの`--window-size`だけではウィンドウが縮小しきらない模様）。この状態で気づかず短辺クロップされた画像を見ると、実際には正しく折り返されているCTAボタンのテキストが「はみ出している」ように誤認する（本セッションで一度誤検知し、無関係な`.btn`修正を入れかけたが、CDP経由で`Emulation.setDeviceMetricsOverride`を直接呼ぶ検証で実際は無問題と判明し、該当CSS変更は取り消し済み）。
+**狭幅を正確に検証する場合は`--remote-debugging-port`を立てて`Emulation.setDeviceMetricsOverride`で明示的にviewportを指定すること。** `--window-size`だけでは信用しない。
+
+**検証結果**：全8幅で構造的な不具合0件（横スクロール・テキスト切れ・CTAボタンのはみ出し・画像アスペクト比崩れなし）。
+- 320px：HERO/PRICE/FINAL CTAの主要CTA「無料見積もりを依頼する」正しく1行で収まる。固定CTAバーはフッター下に正しく配置され本文と重ならない。
+- 768px：ヘッダーは正しくハンバーガーメニューのまま（デスクトップナビへの切替は1024px〜の設計どおり）。
+- 1024px／1440px／1920px：HERO左右分割・4列reasonsグリッド・3列serviceグリッドが正しく適用され、1920pxでも`--container:1120px`で中央寄せ、間延びなし。
+- `.reveal`のスクロール連動フェードインは、スクロールをシミュレートしないと画像・要素が非表示のまま撮影されるため、検証スクリプト側でスクロール後にキャプチャする対応が必要だった（サイト側の不具合ではない）。
+
+### 静的検証
+
+- `id`重複：0件
+- 見出し階層：h1×1 → h2（各セクション）→ h3（カード見出し等）で飛びなし
+- `<img>`の`alt`欠落：0件
+- `canonical` / `og:url` / `robots` / `theme-color`：各1件のみ（重複なし）
+- JSON-LD：`JSON.parse`で構文検証済み
+
+### 並行して進んでいた別プロセスについて（重要な申し送り）
+
+本セッション中、**別のプロセス／セッションが同じリポジトリに同時に書き込みを行っていた**ことを検知した。
+1. 一時的にCONTACTセクションへ電話タップCTA・Googleマップ埋め込み・所在地情報を追加する変更がファイル上に出現したが、**コミットはされておらず**、本セッションのスコープ外（今回の指示は「回帰修正のみ・新規機能追加なし」）だったため、HEAD時点の内容に復元して対応した。
+2. `0f2a057 refactor(css): consolidate repeated muted-on-dark hex colors into variables`（`IMPROVEMENT_REPORT.md`追加込み）は、**このセッションが作業中に実際にコミットされた**。内容は無害な変数統合のみで視覚的差分なしと明記されていたため、そのコミットは尊重し、本セッションの変更はその上に積む形で処理した（詳細は本HANDOFFのこのセクション参照）。
+3. `git status`は当初「originに対して0コミット先行」だったが、上記2.の影響で**このセッション開始時点で既に1コミット先行**していた。本セッション終了時点では合計4コミット先行（`0f2a057` + 本セッションの3件）。**pushは一切行っていない。**
+4. 次にこのリポジトリを触るセッションは、`git log`で想定外のコミットが増えていないか確認すること。同一リポジトリに対する並行書き込みが起こり得る環境であることが判明したため。
+
+### コミット履歴（本セッション分）
+
+- `0632aea` fix: correct WCAG contrast on eyebrow labels
+- `be96a01` feat: add SEO structured data and canonical/theme-color metadata
+- （本コミット）docs: record QA session and viewport verification in HANDOFF
+
+**push未実施。origin/mainとの差分はローカルに留めてある。**
+
+---
+
 ## 0-2. 制作フェーズの記録
 
 **Phase 1（基本実装）完了。画像はプレースホルダーのまま、LP全体が最初から最後まで完成し主要機能が動作する状態。次は Phase 2（レスポンシブ）。**
