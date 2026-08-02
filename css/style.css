@@ -26,6 +26,9 @@
   /* 濃紺背景（フッター／最終CTA）用の控えめな明るいテキスト色。2箇所以上で共通使用 */
   --muted-on-dark: #d7e6f2;
   --muted-on-dark-2: #9db4c8;
+  /* --blueは--blue-light背景上で4.26:1(WCAG AA基準4.5:1未達)のため、
+     テキスト用途で明るい背景に重ねる場合はこちらを使う（5.7:1以上） */
+  --blue-deep: #136494;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -101,7 +104,7 @@ button { font: inherit; color: inherit; }
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--blue);
+  color: var(--blue-deep);
   margin-bottom: 10px;
 }
 .sec-title {
@@ -281,7 +284,7 @@ button { font: inherit; color: inherit; }
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--blue);
+  color: var(--blue-deep);
   background: var(--blue-light);
   padding: 5px 14px;
   border-radius: 999px;
