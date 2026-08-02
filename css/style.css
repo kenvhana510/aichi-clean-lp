@@ -23,6 +23,9 @@
   --text: #1c2b3a;
   --cta: #c2410c;
   --cta-hover: #9a3412;
+  /* 濃紺背景（フッター／最終CTA）用の控えめな明るいテキスト色。2箇所以上で共通使用 */
+  --muted-on-dark: #d7e6f2;
+  --muted-on-dark-2: #9db4c8;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -657,7 +660,7 @@ button { font: inherit; color: inherit; }
   line-height: 1.5;
   margin-bottom: 14px;
 }
-.final-cta__sub { font-size: 15px; color: #d7e6f2; margin-bottom: 28px; }
+.final-cta__sub { font-size: 15px; color: var(--muted-on-dark); margin-bottom: 28px; }
 
 /* ---------- 19. CONTACT / FORM ---------- */
 .contact { padding: var(--sec-py) 0; background: var(--white); }
@@ -748,7 +751,7 @@ button { font: inherit; color: inherit; }
 }
 .site-footer__top { display: grid; gap: 24px; margin-bottom: 28px; }
 .logo--footer .logo__name { color: var(--white); }
-.logo--footer .logo__sub { color: #9db4c8; }
+.logo--footer .logo__sub { color: var(--muted-on-dark-2); }
 .logo--footer .logo__mark { background: var(--white); color: var(--navy-deep); }
 .site-footer__nav ul { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .site-footer__nav a {
@@ -757,7 +760,7 @@ button { font: inherit; color: inherit; }
   align-items: center;
   min-height: 44px;
   font-size: 14px;
-  color: #d7e6f2;
+  color: var(--muted-on-dark);
 }
 .site-footer__nav a:hover { color: var(--white); text-decoration: underline; }
 
@@ -776,7 +779,7 @@ button { font: inherit; color: inherit; }
   margin-bottom: 8px;
 }
 .portfolio-note__text { font-size: 13px; line-height: 1.85; color: #cfe0ee; }
-.site-footer__copy { font-size: 12px; color: #9db4c8; }
+.site-footer__copy { font-size: 12px; color: var(--muted-on-dark-2); }
 
 /* ---------- 21. スマホ固定CTA ---------- */
 .fixed-cta {
