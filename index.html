@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
 <title>ハウスクリーニング｜エアコン・水回り清掃なら AICHI CLEAN（愛知県）</title>
 <meta name="description" content="愛知県のハウスクリーニング AICHI CLEAN。エアコン・キッチン・浴室・トイレ・洗面所の清掃を明朗料金で承ります。お見積もり・ご相談は無料です。">
 <!-- ポートフォリオ用の架空サイトのため、検索エンジンに実在サービスとして索引されないよう設定 -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://kenvhana510.github.io/aichi-clean-lp/">
-<meta name="theme-color" content="#0f3557">
+<meta name="theme-color" content="#1d4ed8">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AICHI CLEAN">
 <meta property="og:title" content="ハウスクリーニング｜エアコン・水回り清掃なら AICHI CLEAN（愛知県）">
@@ -21,10 +22,11 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="明るいリビングで掃除機をかけるハウスクリーニングスタッフ">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f3557'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d4ed8'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/v2-hero-wide.webp" fetchpriority="high">
 <link rel="stylesheet" href="css/style.css">
 <!-- 構造化データ：ポートフォリオ制作物のため架空情報。noindexにより検索エンジンには索引されない -->
 <script type="application/ld+json">
@@ -62,12 +64,12 @@
 
     <nav class="gnav" id="gnav" aria-label="メインナビゲーション">
       <ul class="gnav__list">
-        <li><a href="#service">サービス</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#reasons">選ばれる理由</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#service"><span class="gnav__en" aria-hidden="true">Service</span>サービス</a></li>
+        <li><a href="#price"><span class="gnav__en" aria-hidden="true">Price</span>料金</a></li>
+        <li><a href="#reasons"><span class="gnav__en" aria-hidden="true">Reasons</span>選ばれる理由</a></li>
+        <li><a href="#faq"><span class="gnav__en" aria-hidden="true">FAQ</span>FAQ</a></li>
       </ul>
-      <a class="btn btn--cta btn--sm gnav__cta" href="#contact">無料見積もり</a>
+      <a class="btn btn--cta btn--sm gnav__cta" href="#contact" data-magnetic><span class="btn__label">無料見積もり</span><span class="btn__arrow" aria-hidden="true">→</span></a>
     </nav>
 
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
@@ -82,10 +84,34 @@
 
   <!-- ===================== SECTION 01 / HERO ===================== -->
   <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__media" aria-hidden="true">
+      <img class="hero__img" src="images/v2-hero-wide.webp" alt=""
+           width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
+      <div class="hero__veil"></div>
+    </div>
+
+    <!-- シグネチャ演出②：泡と光の粒（CSSのみ／reduced-motionで停止） -->
+    <div class="bubbles" aria-hidden="true">
+      <span class="bubble" style="--x:8%;  --s:26px; --d:14s; --t:0s"></span>
+      <span class="bubble" style="--x:18%; --s:14px; --d:11s; --t:-3s"></span>
+      <span class="bubble" style="--x:31%; --s:38px; --d:18s; --t:-7s"></span>
+      <span class="bubble" style="--x:44%; --s:10px; --d:9s;  --t:-1s"></span>
+      <span class="bubble" style="--x:57%; --s:22px; --d:13s; --t:-5s"></span>
+      <span class="bubble" style="--x:66%; --s:16px; --d:12s; --t:-9s"></span>
+      <span class="bubble" style="--x:78%; --s:30px; --d:16s; --t:-2s"></span>
+      <span class="bubble" style="--x:88%; --s:12px; --d:10s; --t:-6s"></span>
+      <span class="bubble" style="--x:94%; --s:20px; --d:15s; --t:-4s"></span>
+      <span class="sparkle" style="--x:22%; --y:28%; --t:0s"></span>
+      <span class="sparkle" style="--x:72%; --y:22%; --t:-1.3s"></span>
+      <span class="sparkle" style="--x:84%; --y:58%; --t:-2.1s"></span>
+      <span class="sparkle" style="--x:12%; --y:66%; --t:-0.7s"></span>
+      <span class="sparkle" style="--x:60%; --y:74%; --t:-2.8s"></span>
+    </div>
+
     <div class="hero__inner">
-      <div class="hero__body">
-        <p class="hero__eyebrow">愛知県のハウスクリーニング</p>
-        <h1 class="hero__title" id="hero-title">家の掃除、<br>プロに任せて<br class="u-br-sp">みませんか。</h1>
+      <div class="hero__body glass">
+        <p class="hero__kicker"><span class="kicker-en" aria-hidden="true">House Cleaning in Aichi</span><span class="hero__eyebrow">愛知県のハウスクリーニング</span></p>
+        <h1 class="hero__title" id="hero-title" aria-label="家の掃除、プロに任せてみませんか。"><span class="hero__line">家の掃除、</span><br><span class="hero__line">プロに任せて</span><br class="u-br-sp"><span class="hero__line">みませんか。</span></h1>
         <p class="hero__sub">水回り・エアコン・キッチンまで。<br>愛知県のハウスクリーニングなら AICHI CLEAN。</p>
         <ul class="hero__badges">
           <li>見積もり無料</li>
@@ -93,90 +119,165 @@
           <li>愛知県内対応</li>
         </ul>
         <div class="hero__cta">
-          <a class="btn btn--cta btn--lg" href="#contact">無料見積もりを依頼する</a>
-          <a class="btn btn--outline btn--lg" href="#service">サービスを見る</a>
+          <a class="btn btn--cta btn--lg" href="#contact" data-magnetic><span class="btn__label">無料見積もりを依頼する</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--outline btn--lg" href="#service" data-magnetic><span class="btn__label">サービスを見る</span><span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
+    </div>
 
-      <div class="hero__visual">
-        <div class="img-slot img-slot--hero">
-          <picture>
-            <source srcset="images/hero-main.webp" type="image/webp">
-            <img src="images/hero-main.jpg" alt="明るいリビングで掃除機をかけるハウスクリーニングスタッフ"
-                 width="1200" height="900" loading="eager" fetchpriority="high" decoding="async">
-          </picture>
-        </div>
-      </div>
+    <a class="hero__scroll" href="#marquee" aria-label="下へスクロール">
+      <span class="hero__scroll-en" aria-hidden="true">Scroll</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+
+    <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,50 L1440,90 L0,90 Z" fill="#ffffff"/>
+    </svg>
+  </section>
+
+  <!-- ===================== PHOTO MARQUEE ===================== -->
+  <section class="marquee" id="marquee" aria-label="作業イメージ">
+    <div class="marquee__track">
+      <ul class="marquee__list">
+        <li><img src="images/service-aircon.webp" alt="養生をしてエアコン内部を高圧洗浄するスタッフ" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-faucet.webp" alt="磨き上げた水栓のクローズアップ" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/service-kitchen.webp" alt="システムキッチンのシンクとコンロを清掃するスタッフ" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-tiles.webp" alt="水滴がついた清潔な浴室タイル" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/service-bath.webp" alt="ユニットバスの壁を清掃するスタッフ" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-towels.webp" alt="畳んだタオルと洗剤ボトル" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-staff-window.webp" alt="窓を拭くスタッフ" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/final-cta-bg.webp" alt="明るいリビングで清掃作業をする2名のスタッフ" width="400" height="200" loading="lazy" decoding="async"></li>
+      </ul>
+      <ul class="marquee__list" aria-hidden="true">
+        <li><img src="images/service-aircon.webp" alt="" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-faucet.webp" alt="" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/service-kitchen.webp" alt="" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-tiles.webp" alt="" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/service-bath.webp" alt="" width="400" height="300" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-detail-towels.webp" alt="" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/v2-staff-window.webp" alt="" width="400" height="267" loading="lazy" decoding="async"></li>
+        <li><img src="images/final-cta-bg.webp" alt="" width="400" height="200" loading="lazy" decoding="async"></li>
+      </ul>
     </div>
   </section>
 
   <!-- ===================== SECTION 02 / PROBLEM ===================== -->
   <section class="problem" aria-labelledby="problem-title">
     <div class="container">
-      <p class="eyebrow reveal">PROBLEM</p>
-      <h2 class="sec-title reveal" id="problem-title">こんなお悩みありませんか？</h2>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Problem</span>PROBLEM</p>
+        <h2 class="sec-title reveal" id="problem-title">こんなお悩みありませんか？</h2>
+      </div>
 
       <ul class="problem__list">
-        <li class="problem__item reveal">忙しくて掃除する時間がない</li>
-        <li class="problem__item reveal" style="--delay:.05s">水回りの汚れが落ちない</li>
-        <li class="problem__item reveal" style="--delay:.1s">エアコン内部まで掃除できない</li>
-        <li class="problem__item reveal" style="--delay:.15s">業者に頼みたいけれど料金が不安</li>
-        <li class="problem__item reveal" style="--delay:.2s">どの業者を選べばいいか分からない</li>
+        <li class="problem__item glass reveal">忙しくて掃除する時間がない</li>
+        <li class="problem__item glass reveal">水回りの汚れが落ちない</li>
+        <li class="problem__item glass reveal">エアコン内部まで掃除できない</li>
+        <li class="problem__item glass reveal">業者に頼みたいけれど料金が不安</li>
+        <li class="problem__item glass reveal">どの業者を選べばいいか分からない</li>
       </ul>
     </div>
   </section>
 
   <!-- ===================== SECTION 03 / SOLUTION ===================== -->
   <section class="solution" aria-labelledby="solution-title">
-    <div class="container container--narrow">
-      <p class="eyebrow reveal">SOLUTION</p>
-      <h2 class="sec-title reveal" id="solution-title">面倒な掃除は、<br class="u-br-sp">プロにお任せください。</h2>
-      <p class="sec-lead reveal">専用の洗剤と道具、そして汚れに合わせた手順があるから、ご家庭では落としきれない汚れもきれいにできます。作業前に内容と料金をご説明し、ご納得いただいてから作業を始めます。</p>
+    <div class="container solution__inner">
+      <div class="solution__visual reveal">
+        <div class="photo-mask photo-mask--blob" data-parallax="30">
+          <img src="images/v2-staff-window.webp" alt="日差しの入る窓を拭き上げるスタッフ" width="1536" height="1024" loading="lazy" decoding="async">
+        </div>
+        <div class="photo-mask photo-mask--small" data-parallax="-20">
+          <img src="images/v2-detail-faucet.webp" alt="磨き上げた水栓のクローズアップ" width="1536" height="1024" loading="lazy" decoding="async">
+        </div>
+      </div>
 
-      <ul class="solution__points">
-        <li class="solution__point reveal">
-          <h3>時間が戻る</h3>
-          <p>掃除にかけていた休日の時間を、ご家族との時間に使えます。</p>
-        </li>
-        <li class="solution__point reveal" style="--delay:.08s">
-          <h3>届かない場所まで</h3>
-          <p>エアコン内部や換気扇など、分解が必要な場所も対応します。</p>
-        </li>
-        <li class="solution__point reveal" style="--delay:.16s">
-          <h3>料金が明確</h3>
-          <p>作業前に料金をご提示。ご納得いただいてから作業します。</p>
-        </li>
-      </ul>
+      <div class="solution__body">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Solution</span>SOLUTION</p>
+        <h2 class="sec-title reveal" id="solution-title">面倒な掃除は、<br class="u-br-sp">プロにお任せください。</h2>
+        <p class="sec-lead reveal">専用の洗剤と道具、そして汚れに合わせた手順があるから、ご家庭では落としきれない汚れもきれいにできます。作業前に内容と料金をご説明し、ご納得いただいてから作業を始めます。</p>
+
+        <ul class="solution__points">
+          <li class="solution__point reveal">
+            <span class="solution__num" aria-hidden="true">01</span>
+            <div>
+              <h3>時間が戻る</h3>
+              <p>掃除にかけていた休日の時間を、ご家族との時間に使えます。</p>
+            </div>
+          </li>
+          <li class="solution__point reveal">
+            <span class="solution__num" aria-hidden="true">02</span>
+            <div>
+              <h3>届かない場所まで</h3>
+              <p>エアコン内部や換気扇など、分解が必要な場所も対応します。</p>
+            </div>
+          </li>
+          <li class="solution__point reveal">
+            <span class="solution__num" aria-hidden="true">03</span>
+            <div>
+              <h3>料金が明確</h3>
+              <p>作業前に料金をご提示。ご納得いただいてから作業します。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- ===================== SECTION 04 / WHY CHOOSE US ===================== -->
   <section class="reasons" id="reasons" aria-labelledby="reasons-title">
     <div class="container">
-      <p class="eyebrow reveal">WHY CHOOSE US</p>
-      <h2 class="sec-title reveal" id="reasons-title">AICHI CLEAN が選ばれる理由</h2>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Why choose us</span>WHY CHOOSE US</p>
+        <h2 class="sec-title reveal" id="reasons-title">AICHI CLEAN が選ばれる理由</h2>
+      </div>
+
+      <!-- シグネチャ演出③：カウントアップ（数値は既存掲載内容から算出） -->
+      <ul class="stats reveal" aria-label="サービスの概要">
+        <li class="stat glass">
+          <span class="stat__value"><span class="count" data-count="0">0</span><span class="stat__unit">円</span></span>
+          <span class="stat__label">お見積もり・ご相談</span>
+        </li>
+        <li class="stat glass">
+          <span class="stat__value"><span class="count" data-count="6">6</span><span class="stat__unit">種類</span></span>
+          <span class="stat__label">サービスメニュー</span>
+        </li>
+        <li class="stat glass">
+          <span class="stat__value"><span class="count" data-count="8">8</span><span class="stat__unit">市</span></span>
+          <span class="stat__label">愛知県内の対応エリア</span>
+        </li>
+        <li class="stat glass">
+          <span class="stat__value"><span class="count" data-count="5">5</span><span class="stat__unit">STEP</span></span>
+          <span class="stat__label">ご依頼から完了まで</span>
+        </li>
+      </ul>
 
       <div class="reasons__grid">
-        <article class="reason-card reveal">
+        <article class="reason-card glass reveal">
           <p class="reason-card__num" aria-hidden="true">01</p>
           <h3 class="reason-card__title">明朗料金</h3>
           <p class="reason-card__text">作業前に料金をご提示します。追加料金が発生する可能性がある場合は、必ず事前にご説明します。</p>
         </article>
-        <article class="reason-card reveal" style="--delay:.08s">
+        <article class="reason-card glass reveal">
           <p class="reason-card__num" aria-hidden="true">02</p>
           <h3 class="reason-card__title">プロによる清掃</h3>
           <p class="reason-card__text">場所や汚れの種類に合わせて、洗剤と道具を使い分けて作業します。</p>
         </article>
-        <article class="reason-card reveal" style="--delay:.16s">
+        <article class="reason-card glass reveal">
           <p class="reason-card__num" aria-hidden="true">03</p>
           <h3 class="reason-card__title">地域密着</h3>
           <p class="reason-card__text">愛知県内を中心に対応。お問い合わせから訪問まで迅速にご対応します。</p>
         </article>
-        <article class="reason-card reveal" style="--delay:.24s">
+        <article class="reason-card glass reveal">
           <p class="reason-card__num" aria-hidden="true">04</p>
           <h3 class="reason-card__title">安心対応</h3>
           <p class="reason-card__text">作業内容と料金をご確認いただいてから開始し、作業後は一緒に仕上がりを確認します。</p>
         </article>
+      </div>
+
+      <div class="reasons__photo reveal">
+        <div class="photo-mask photo-mask--wide" data-parallax="24">
+          <img src="images/v2-team-van.webp" alt="作業車の前に並ぶ3名のスタッフ" width="1536" height="1024" loading="lazy" decoding="async">
+        </div>
       </div>
     </div>
   </section>
@@ -184,58 +285,63 @@
   <!-- ===================== SECTION 05 / SERVICE ===================== -->
   <section class="service" id="service" aria-labelledby="service-title">
     <div class="container">
-      <p class="eyebrow reveal">SERVICE</p>
-      <h2 class="sec-title reveal" id="service-title">サービス一覧</h2>
-      <p class="sec-lead reveal">気になる場所だけのご依頼も、まとめてのご依頼も承ります。</p>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Service</span>SERVICE</p>
+        <h2 class="sec-title reveal" id="service-title">サービス一覧</h2>
+        <p class="sec-lead reveal">気になる場所だけのご依頼も、まとめてのご依頼も承ります。</p>
+      </div>
 
       <div class="service__grid">
-        <article class="service-card reveal">
+        <article class="service-card glass reveal">
           <div class="img-slot">
-            <picture>
-              <source srcset="images/service-aircon.webp" type="image/webp">
-              <img src="images/service-aircon.jpg" alt="養生をしてエアコン内部を高圧洗浄するスタッフ"
-                   width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+            <img src="images/service-aircon.webp" alt="養生をしてエアコン内部を高圧洗浄するスタッフ"
+                 width="800" height="600" loading="lazy" decoding="async">
           </div>
           <h3 class="service-card__title">エアコンクリーニング</h3>
           <p class="service-card__text">内部のカビ・ホコリ・汚れを分解して洗浄します。</p>
         </article>
 
-        <article class="service-card reveal" style="--delay:.06s">
+        <article class="service-card glass reveal">
           <div class="img-slot">
-            <picture>
-              <source srcset="images/service-kitchen.webp" type="image/webp">
-              <img src="images/service-kitchen.jpg" alt="システムキッチンのシンクとコンロを清掃するスタッフ"
-                   width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+            <img src="images/service-kitchen.webp" alt="システムキッチンのシンクとコンロを清掃するスタッフ"
+                 width="800" height="600" loading="lazy" decoding="async">
           </div>
           <h3 class="service-card__title">キッチンクリーニング</h3>
           <p class="service-card__text">コンロ、シンク、換気扇まわりの油汚れを落とします。</p>
         </article>
 
-        <article class="service-card reveal" style="--delay:.12s">
+        <article class="service-card glass reveal">
           <div class="img-slot">
-            <picture>
-              <source srcset="images/service-bath.webp" type="image/webp">
-              <img src="images/service-bath.jpg" alt="ユニットバスの壁を清掃するスタッフ"
-                   width="800" height="600" loading="lazy" decoding="async">
-            </picture>
+            <img src="images/service-bath.webp" alt="ユニットバスの壁を清掃するスタッフ"
+                 width="800" height="600" loading="lazy" decoding="async">
           </div>
           <h3 class="service-card__title">浴室クリーニング</h3>
           <p class="service-card__text">水垢、皮脂汚れ、カビを取り除きます。</p>
         </article>
 
-        <article class="service-card service-card--compact reveal" style="--delay:.18s">
+        <article class="service-card glass reveal">
+          <div class="img-slot">
+            <img src="images/v2-detail-tiles.webp" alt="水滴がついた清潔な白いタイル（イメージ）"
+                 width="1536" height="1024" loading="lazy" decoding="async">
+          </div>
           <h3 class="service-card__title">トイレクリーニング</h3>
           <p class="service-card__text">便器・床・周辺設備をまとめて清掃します。</p>
         </article>
 
-        <article class="service-card service-card--compact reveal" style="--delay:.24s">
+        <article class="service-card glass reveal">
+          <div class="img-slot">
+            <img src="images/v2-detail-faucet.webp" alt="磨き上げた水栓のクローズアップ"
+                 width="1536" height="1024" loading="lazy" decoding="async">
+          </div>
           <h3 class="service-card__title">洗面所クリーニング</h3>
           <p class="service-card__text">鏡のくもり、水栓、洗面ボウルをきれいにします。</p>
         </article>
 
-        <article class="service-card service-card--compact reveal" style="--delay:.3s">
+        <article class="service-card glass reveal">
+          <div class="img-slot">
+            <img src="images/v2-family-room.webp" alt="きれいになったリビングでくつろぐ家族"
+                 width="1536" height="1024" loading="lazy" decoding="async">
+          </div>
           <h3 class="service-card__title">お家まるごとクリーニング</h3>
           <p class="service-card__text">複数箇所をまとめてご依頼いただけます。</p>
         </article>
@@ -245,12 +351,17 @@
 
   <!-- ===================== SECTION 06 / PRICE ===================== -->
   <section class="price" id="price" aria-labelledby="price-title">
+    <div class="price__bg" aria-hidden="true">
+      <img src="images/v2-texture-ripple.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+    </div>
     <div class="container container--narrow">
-      <p class="eyebrow reveal">PRICE</p>
-      <h2 class="sec-title reveal" id="price-title">料金の目安</h2>
-      <p class="sec-lead reveal">汚れの状態や広さによって変動します。正確な金額はお見積もりでご案内します。</p>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Price</span>PRICE</p>
+        <h2 class="sec-title reveal" id="price-title">料金の目安</h2>
+        <p class="sec-lead reveal">汚れの状態や広さによって変動します。正確な金額はお見積もりでご案内します。</p>
+      </div>
 
-      <div class="price__table-wrap reveal">
+      <div class="price__table-wrap glass reveal">
         <table class="price-table">
           <caption class="u-visually-hidden">サービス別の料金目安</caption>
           <thead>
@@ -269,93 +380,73 @@
       <p class="price__note reveal">※掲載料金はポートフォリオ制作のための架空料金です。</p>
 
       <div class="price__cta reveal">
-        <a class="btn btn--cta btn--lg" href="#contact">無料見積もりを依頼する</a>
+        <a class="btn btn--cta btn--lg" href="#contact" data-magnetic><span class="btn__label">無料見積もりを依頼する</span><span class="btn__arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
   <!-- ===================== SECTION 07 / BEFORE・AFTER ===================== -->
+  <!-- シグネチャ演出①：ドラッグで比較できるスライダー（range input で操作＝キーボード対応） -->
   <section class="ba" aria-labelledby="ba-title">
     <div class="container">
-      <p class="eyebrow reveal">BEFORE / AFTER</p>
-      <h2 class="sec-title reveal" id="ba-title">清掃前後の変化</h2>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Before / After</span>BEFORE / AFTER</p>
+        <h2 class="sec-title reveal" id="ba-title">清掃前後の変化</h2>
+        <p class="sec-lead reveal">中央のハンドルを左右にドラッグすると、清掃前後を見比べられます。</p>
+      </div>
 
       <div class="ba__list">
-        <article class="ba-item reveal">
+        <article class="ba-item glass reveal">
           <h3 class="ba-item__title">キッチン</h3>
-          <div class="ba-item__pair">
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-kitchen-before.webp" type="image/webp">
-                  <img src="images/ba-kitchen-before.jpg" alt="清掃前のキッチンシンク。全体がくすみ水垢が付着している"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--before">BEFORE</figcaption>
-            </figure>
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-kitchen-after.webp" type="image/webp">
-                  <img src="images/ba-kitchen-after.jpg" alt="清掃後のキッチンシンク。ステンレスが光沢を取り戻している"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--after">AFTER</figcaption>
-            </figure>
+          <div class="cmp" data-cmp>
+            <div class="cmp__before">
+              <img src="images/ba-kitchen-before.webp" alt="清掃前のキッチンシンク。全体がくすみ水垢が付着している"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--before" aria-hidden="true">BEFORE</span>
+            </div>
+            <div class="cmp__after">
+              <img src="images/ba-kitchen-after.webp" alt="清掃後のキッチンシンク。ステンレスが光沢を取り戻している"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--after" aria-hidden="true">AFTER</span>
+            </div>
+            <div class="cmp__handle" aria-hidden="true"><span class="cmp__knob"></span></div>
+            <input class="cmp__range" type="range" min="0" max="100" value="50" step="1" aria-label="キッチンの清掃前後を比較するスライダー">
           </div>
         </article>
 
-        <article class="ba-item reveal" style="--delay:.08s">
+        <article class="ba-item glass reveal">
           <h3 class="ba-item__title">浴室</h3>
-          <div class="ba-item__pair">
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-bath-before.webp" type="image/webp">
-                  <img src="images/ba-bath-before.jpg" alt="清掃前の浴室。床が黄ばみ目地が黒ずんでいる"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--before">BEFORE</figcaption>
-            </figure>
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-bath-after.webp" type="image/webp">
-                  <img src="images/ba-bath-after.jpg" alt="清掃後の浴室。床と目地が白く清潔になっている"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--after">AFTER</figcaption>
-            </figure>
+          <div class="cmp" data-cmp>
+            <div class="cmp__before">
+              <img src="images/ba-bath-before.webp" alt="清掃前の浴室。床が黄ばみ目地が黒ずんでいる"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--before" aria-hidden="true">BEFORE</span>
+            </div>
+            <div class="cmp__after">
+              <img src="images/ba-bath-after.webp" alt="清掃後の浴室。床と目地が白く清潔になっている"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--after" aria-hidden="true">AFTER</span>
+            </div>
+            <div class="cmp__handle" aria-hidden="true"><span class="cmp__knob"></span></div>
+            <input class="cmp__range" type="range" min="0" max="100" value="50" step="1" aria-label="浴室の清掃前後を比較するスライダー">
           </div>
         </article>
 
-        <article class="ba-item reveal" style="--delay:.16s">
+        <article class="ba-item glass reveal">
           <h3 class="ba-item__title">エアコン</h3>
-          <div class="ba-item__pair">
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-aircon-before.webp" type="image/webp">
-                  <img src="images/ba-aircon-before.jpg" alt="清掃前のエアコン内部。フィン全体がホコリで覆われている"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--before">BEFORE</figcaption>
-            </figure>
-            <figure class="ba-figure">
-              <div class="img-slot img-slot--ba">
-                <picture>
-                  <source srcset="images/ba-aircon-after.webp" type="image/webp">
-                  <img src="images/ba-aircon-after.jpg" alt="清掃後のエアコン内部。フィンが金属の光沢を取り戻している"
-                       width="800" height="600" loading="lazy" decoding="async">
-                </picture>
-              </div>
-              <figcaption class="ba-figure__cap ba-figure__cap--after">AFTER</figcaption>
-            </figure>
+          <div class="cmp" data-cmp>
+            <div class="cmp__before">
+              <img src="images/ba-aircon-before.webp" alt="清掃前のエアコン内部。フィン全体がホコリで覆われている"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--before" aria-hidden="true">BEFORE</span>
+            </div>
+            <div class="cmp__after">
+              <img src="images/ba-aircon-after.webp" alt="清掃後のエアコン内部。フィンが金属の光沢を取り戻している"
+                   width="800" height="600" loading="lazy" decoding="async">
+              <span class="cmp__tag cmp__tag--after" aria-hidden="true">AFTER</span>
+            </div>
+            <div class="cmp__handle" aria-hidden="true"><span class="cmp__knob"></span></div>
+            <input class="cmp__range" type="range" min="0" max="100" value="50" step="1" aria-label="エアコンの清掃前後を比較するスライダー">
           </div>
         </article>
       </div>
@@ -366,32 +457,34 @@
 
   <!-- ===================== SECTION 08 / FLOW ===================== -->
   <section class="flow" aria-labelledby="flow-title">
-    <div class="container container--narrow">
-      <p class="eyebrow reveal">FLOW</p>
-      <h2 class="sec-title reveal" id="flow-title">ご依頼から完了までの流れ</h2>
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Flow</span>FLOW</p>
+        <h2 class="sec-title reveal" id="flow-title">ご依頼から完了までの流れ</h2>
+      </div>
 
       <ol class="flow__list">
-        <li class="flow__item reveal">
+        <li class="flow__item glass reveal">
           <span class="flow__step">STEP 01</span>
           <h3 class="flow__name">お問い合わせ</h3>
           <p class="flow__text">フォームまたはお電話でご連絡ください。</p>
         </li>
-        <li class="flow__item reveal" style="--delay:.06s">
+        <li class="flow__item glass reveal">
           <span class="flow__step">STEP 02</span>
           <h3 class="flow__name">内容確認・お見積もり</h3>
           <p class="flow__text">作業箇所と汚れの状態を確認し、料金をご提示します。</p>
         </li>
-        <li class="flow__item reveal" style="--delay:.12s">
+        <li class="flow__item glass reveal">
           <span class="flow__step">STEP 03</span>
           <h3 class="flow__name">ご訪問・作業</h3>
           <p class="flow__text">ご希望の日時にお伺いし、作業を行います。</p>
         </li>
-        <li class="flow__item reveal" style="--delay:.18s">
+        <li class="flow__item glass reveal">
           <span class="flow__step">STEP 04</span>
           <h3 class="flow__name">仕上がり確認</h3>
           <p class="flow__text">作業後、お客様と一緒に仕上がりを確認します。</p>
         </li>
-        <li class="flow__item reveal" style="--delay:.24s">
+        <li class="flow__item glass reveal">
           <span class="flow__step">STEP 05</span>
           <h3 class="flow__name">完了</h3>
           <p class="flow__text">ご確認いただいたうえで、お支払いとなります。</p>
@@ -403,19 +496,24 @@
   <!-- ===================== SECTION 09 / VOICE ===================== -->
   <section class="voice" aria-labelledby="voice-title">
     <div class="container">
-      <p class="eyebrow reveal">VOICE</p>
-      <h2 class="sec-title reveal" id="voice-title">ご利用いただいたお客様の声</h2>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Voice</span>VOICE</p>
+        <h2 class="sec-title reveal" id="voice-title">ご利用いただいたお客様の声</h2>
+      </div>
 
       <div class="voice__grid">
-        <article class="voice-card reveal">
+        <article class="voice-card glass reveal">
+          <span class="voice-card__quote" aria-hidden="true">“</span>
           <p class="voice-card__text">仕事と育児で掃除する時間がなくお願いしました。水回りがとてもきれいになり助かりました。</p>
           <p class="voice-card__who">30代・女性（名古屋市）</p>
         </article>
-        <article class="voice-card reveal" style="--delay:.08s">
+        <article class="voice-card glass reveal">
+          <span class="voice-card__quote" aria-hidden="true">“</span>
           <p class="voice-card__text">料金の説明が分かりやすく、安心してお願いできました。</p>
           <p class="voice-card__who">40代・男性（豊田市）</p>
         </article>
-        <article class="voice-card reveal" style="--delay:.16s">
+        <article class="voice-card glass reveal">
+          <span class="voice-card__quote" aria-hidden="true">“</span>
           <p class="voice-card__text">自分では届かない場所まで掃除してもらえて満足しています。</p>
           <p class="voice-card__who">60代・女性（岡崎市）</p>
         </article>
@@ -427,34 +525,43 @@
 
   <!-- ===================== SECTION 10 / AREA ===================== -->
   <section class="area" aria-labelledby="area-title">
-    <div class="container container--narrow">
-      <p class="eyebrow reveal">AREA</p>
-      <h2 class="sec-title reveal" id="area-title">対応エリア</h2>
-      <p class="sec-lead reveal">愛知県内を中心に対応しています。</p>
+    <div class="container area__inner">
+      <div class="area__body">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Area</span>AREA</p>
+        <h2 class="sec-title reveal" id="area-title">対応エリア</h2>
+        <p class="sec-lead reveal">愛知県内を中心に対応しています。</p>
 
-      <ul class="area__list reveal">
-        <li>名古屋市</li>
-        <li>豊田市</li>
-        <li>岡崎市</li>
-        <li>安城市</li>
-        <li>刈谷市</li>
-        <li>高浜市</li>
-        <li>知立市</li>
-        <li>豊明市</li>
-      </ul>
+        <ul class="area__list reveal">
+          <li>名古屋市</li>
+          <li>豊田市</li>
+          <li>岡崎市</li>
+          <li>安城市</li>
+          <li>刈谷市</li>
+          <li>高浜市</li>
+          <li>知立市</li>
+          <li>豊明市</li>
+        </ul>
 
-      <p class="area__note reveal">※本サイトは架空サービスのため、記載エリアは実際の営業範囲ではありません。</p>
+        <p class="area__note reveal">※本サイトは架空サービスのため、記載エリアは実際の営業範囲ではありません。</p>
+      </div>
+      <div class="area__visual reveal">
+        <div class="photo-mask photo-mask--tall" data-parallax="24">
+          <img src="images/v2-staff-kitchen-portrait.webp" alt="キッチンのシンクを磨くスタッフ" width="1024" height="1536" loading="lazy" decoding="async">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===================== SECTION 11 / FAQ ===================== -->
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="container container--narrow">
-      <p class="eyebrow reveal">FAQ</p>
-      <h2 class="sec-title reveal" id="faq-title">よくあるご質問</h2>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">FAQ</span>FAQ</p>
+        <h2 class="sec-title reveal" id="faq-title">よくあるご質問</h2>
+      </div>
 
       <div class="faq__list">
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -467,7 +574,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -480,7 +587,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -493,7 +600,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -506,7 +613,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -519,7 +626,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal">
+        <div class="faq-item glass reveal">
           <h3 class="faq-item__head">
             <button class="faq-item__btn" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
               <span class="faq-item__q" aria-hidden="true">Q</span>
@@ -537,31 +644,31 @@
 
   <!-- ===================== SECTION 12 / FINAL CTA ===================== -->
   <section class="final-cta" aria-labelledby="final-cta-title">
-    <div class="final-cta__bg">
-      <div class="img-slot img-slot--bg">
-        <picture>
-          <source srcset="images/final-cta-bg.webp" type="image/webp">
-          <img src="images/final-cta-bg.jpg" alt="明るいリビングで清掃作業をする2名のスタッフ"
-               width="1600" height="800" loading="lazy" decoding="async">
-        </picture>
-      </div>
+    <div class="final-cta__bg" data-parallax="40">
+      <img src="images/v2-family-room.webp" alt="きれいになったリビングでくつろぐ家族"
+           width="1536" height="1024" loading="lazy" decoding="async">
       <div class="final-cta__overlay" aria-hidden="true"></div>
     </div>
     <div class="container final-cta__content">
-      <h2 class="final-cta__title" id="final-cta-title">気になる汚れ、<br class="u-br-sp">プロに相談してみませんか？</h2>
-      <p class="final-cta__sub">お見積もり・ご相談は無料です。</p>
-      <a class="btn btn--cta btn--lg" href="#contact">無料見積もりを依頼する</a>
+      <div class="final-cta__card glass glass--dark reveal">
+        <p class="kicker-en kicker-en--light" aria-hidden="true">Contact us</p>
+        <h2 class="final-cta__title" id="final-cta-title">気になる汚れ、<br class="u-br-sp">プロに相談してみませんか？</h2>
+        <p class="final-cta__sub">お見積もり・ご相談は無料です。</p>
+        <a class="btn btn--cta btn--lg" href="#contact" data-magnetic><span class="btn__label">無料見積もりを依頼する</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
     </div>
   </section>
 
   <!-- ===================== CONTACT ===================== -->
   <section class="contact" id="contact" aria-labelledby="contact-title">
     <div class="container container--narrow">
-      <p class="eyebrow reveal">CONTACT</p>
-      <h2 class="sec-title reveal" id="contact-title">無料見積もり・お問い合わせ</h2>
-      <p class="sec-lead reveal">下記フォームよりお気軽にご相談ください。</p>
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="kicker-en" aria-hidden="true">Contact</span>CONTACT</p>
+        <h2 class="sec-title reveal" id="contact-title">無料見積もり・お問い合わせ</h2>
+        <p class="sec-lead reveal">下記フォームよりお気軽にご相談ください。</p>
+      </div>
 
-      <form class="form" id="contactForm" novalidate>
+      <form class="form glass" id="contactForm" novalidate>
         <div class="form__field">
           <label class="form__label" for="f-name">お名前<span class="form__req">必須</span></label>
           <input class="form__input" type="text" id="f-name" name="name" autocomplete="name" required placeholder="愛知 太郎">
@@ -598,17 +705,17 @@
 
         <p class="form__note">※このサイトはポートフォリオ作品のため、実際の送信は行われません。</p>
 
-        <button class="btn btn--cta btn--lg btn--block" type="submit">この内容で送信する</button>
+        <button class="btn btn--cta btn--lg btn--block" type="submit"><span class="btn__label">この内容で送信する</span><span class="btn__arrow" aria-hidden="true">→</span></button>
       </form>
 
-      <div class="form-done" id="formDone" hidden>
+      <div class="form-done glass" id="formDone" hidden>
         <p class="form-done__icon" aria-hidden="true">✓</p>
         <h3 class="form-done__title">送信内容を確認しました</h3>
         <p class="form-done__text">
           このサイトはポートフォリオ作品のため、実際の送信は行われません。<br>
           本番環境では、ここに受付完了メッセージとご連絡までの目安を表示します。
         </p>
-        <button class="btn btn--outline" type="button" id="formBack">フォームに戻る</button>
+        <button class="btn btn--outline" type="button" id="formBack"><span class="btn__label">フォームに戻る</span></button>
       </div>
     </div>
   </section>
@@ -651,10 +758,12 @@
 </footer>
 
 <!-- ===================== スマホ固定CTA ===================== -->
-<div class="fixed-cta">
-  <a class="btn btn--cta btn--block" href="#contact">無料見積もり</a>
+<div class="fixed-cta glass">
+  <a class="btn btn--cta btn--block" href="#contact"><span class="btn__label">無料見積もり</span><span class="btn__arrow" aria-hidden="true">→</span></a>
 </div>
 
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
