@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AICHI CLEAN はポートフォリオ用の架空サイトです。robots.txt / meta robots で noindex,
+     全クローラーDisallowとしているため検索エンジンには索引されません。
+     本ファイルはサイト構造を明示するための技術的な網羅性確認用です（1ページ構成のLP）。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kenvhana510.github.io/aichi-clean-lp/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
